@@ -1,14 +1,16 @@
 <template>
   <div class="flex flex-row">
     <div class="w-2/12">
-      <Sidebar current-user="admin" />
+      <Sidebar :current-user="user" />
     </div>
     <div class="w-10/12 h-screen bg-gray-100">
       <div class="pt-5 px-5">
         <h1 class="text-3xl py-3 pb-4 font-bold">{{ title }}</h1>
         <NestedNav :items="navItem" />
       </div>
-      <slot />
+      <div class="px-5 py-10">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,10 @@ const props = defineProps({
 	title: {
 		type: String,
 		default: ''
+	},
+	user: {
+		type: String,
+		default: 'Admin'
 	}
 });
 </script>

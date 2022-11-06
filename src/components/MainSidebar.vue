@@ -1,7 +1,15 @@
 <template>
   <div class="flex h-screen flex-col justify-between border-r bg-white">
     <div class="px-4 py-6">
-      <span class="block h-10 w-32 rounded-lg bg-gray-200"></span>
+      <div class="flex items-center gap-4">
+        <img
+          src="https://cdn.discordapp.com/attachments/1024849769392242711/1026062088352829450/IMG_0081.png"
+          width="60"
+        />
+        <span class="block px-5 py-2 rounded-lg bg-gray-100 text-md"
+          >{{ currentUser }} dashboard</span
+        >
+      </div>
 
       <nav aria-label="Main Nav" class="mt-6 flex flex-col space-y-1">
         <details
@@ -71,7 +79,7 @@ import { defineProps, computed } from 'vue';
 const props = defineProps({
 	currentUser: {
 		type: String,
-		default: 'admin'
+		default: 'Admin'
 	}
 });
 
@@ -113,8 +121,71 @@ const adminNav = [
 	}
 ];
 
+const managerNav = [
+	{
+		label: 'Manage',
+		icon: 'fa-solid fa-users',
+		nested: [
+			{
+				label: 'Member Info',
+				icon: 'fa-solid fa-user'
+			},
+			{
+				label: 'Item',
+				icon: 'fa-solid fa-box'
+			},
+			{
+				label: 'Equipment Rental',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				label: 'Dive Package',
+				icon: 'fa-solid fa-cubes'
+			},
+			{
+				label: 'Deliver Status',
+				icon: 'fa-solid fa-truck'
+			}
+		]
+	},
+	{
+		label: 'Generate Report',
+		icon: 'fa-solid fa-address-card',
+		nested: [
+			{
+				label: 'Sales report',
+				icon: 'fa-solid fa-user'
+			},
+			{
+				label: 'Membership report',
+				icon: 'fa-solid fa-box'
+			},
+			{
+				label: 'Dive package registration report',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				label: 'Dive center partner report',
+				icon: 'fa-solid fa-cubes'
+			},
+			{
+				label: 'Items sold / rented report',
+				icon: 'fa-solid fa-truck'
+			}
+		]
+	},
+	{
+		label: 'Account',
+		icon: 'fa-solid fa-user-gear',
+		nested: []
+	}
+];
+
+console.log(props.currentUser);
 const displayUserNav = computed(() => {
-	return props.currentUser === 'admin' ? adminNav : props.currentUser;
+	if (props.currentUser === 'Manager') return managerNav;
+	if (props.currentUser === 'Admin');
+	return adminNav;
 });
 </script>
 

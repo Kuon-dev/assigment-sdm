@@ -15,6 +15,13 @@
     <ShoppingCart />
 
     <SignupPage />
+
+    <AdminDashboard
+      title="Manage Item"
+      :nav-item="['Revenue', 'Total Transaction', 'Total Order Value']"
+      user="Manager"
+    >
+    </AdminDashboard>
   </div>
 </template>
 
