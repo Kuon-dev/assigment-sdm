@@ -17,7 +17,6 @@
           >
             <div
               class="flex items-center text-gray-500 hover:text-gray-600 cursor-pointer mb-2"
-              onclick="checkoutHandler(false)"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

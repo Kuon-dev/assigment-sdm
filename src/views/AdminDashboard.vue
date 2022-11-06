@@ -8,7 +8,7 @@
         <h1 class="text-3xl py-3 pb-4 font-bold">{{ title }}</h1>
         <NestedNav :items="navItem" />
       </div>
-      <div class="px-5 py-10">
+      <div class="pl-0 pr-10 py-10">
         <slot />
       </div>
     </div>

@@ -17,10 +17,11 @@
     <SignupPage />
 
     <AdminDashboard
-      title="Manage Item"
+      title="Generate Report: Sales Report"
       :nav-item="['Revenue', 'Total Transaction', 'Total Order Value']"
       user="Manager"
     >
+      <ManagerGUI />
     </AdminDashboard>
   </div>
 </template>
@@ -38,6 +39,7 @@ import PackageRegister from './views/PackageRegister.vue';
 import SignupPage from './views/SignupPage.vue';
 
 import AdminGUI from './views/AdminGUI.vue';
+import ManagerGUI from './views/ManagerGUI.vue';
 </script>
 
 <style>
