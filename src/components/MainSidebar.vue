@@ -181,9 +181,22 @@ const managerNav = [
 	}
 ];
 
+const receptionistNav = [
+	{
+		label: 'Dive Packages',
+		icon: 'fa-solid fa-user-gear'
+	},
+	{
+		label: 'Account',
+		icon: 'fa-solid fa-user-gear',
+		nested: []
+	}
+];
+
 console.log(props.currentUser);
 const displayUserNav = computed(() => {
 	if (props.currentUser === 'Manager') return managerNav;
+	if (props.currentUser === 'Receptionist') return receptionistNav;
 	if (props.currentUser === 'Admin');
 	return adminNav;
 });

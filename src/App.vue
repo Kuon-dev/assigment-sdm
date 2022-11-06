@@ -23,6 +23,15 @@
     >
       <ManagerGUI />
     </AdminDashboard>
+
+    <hr />
+    <AdminDashboard
+      title="View Dive Packages Record"
+      :nav-item="['All Packages', 'Contact Admin']"
+      user="Receptionist"
+    >
+      <ReceptionistGUI />
+    </AdminDashboard>
   </div>
 </template>
 
@@ -40,6 +49,7 @@ import SignupPage from './views/SignupPage.vue';
 
 import AdminGUI from './views/AdminGUI.vue';
 import ManagerGUI from './views/ManagerGUI.vue';
+import ReceptionistGUI from './views/ReceptionistGUI.vue';
 </script>
 
 <style>

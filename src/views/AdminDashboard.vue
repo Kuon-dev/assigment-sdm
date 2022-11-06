@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row">
+  <div class="flex flex-row max-h-screen min-h-screen">
     <div class="w-2/12">
       <Sidebar :current-user="user" />
     </div>
@@ -8,7 +8,7 @@
         <h1 class="text-3xl py-3 pb-4 font-bold">{{ title }}</h1>
         <NestedNav :items="navItem" />
       </div>
-      <div class="pl-0 pr-10 py-10">
+      <div class="pl-0 pr-10 py-10 max-h-screen">
         <slot />
       </div>
     </div>
