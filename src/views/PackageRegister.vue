@@ -32,55 +32,75 @@
 
           <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
             <form action="" class="space-y-4">
+              <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
+                <div>
+                  <input
+                    class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
+                    placeholder="First Name"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <input
+                    class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
+                    placeholder="Last Name"
+                    type="text"
+                  />
+                </div>
+              </div>
               <div>
-                <label class="sr-only" for="name">Name</label>
                 <input
                   class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
-                  placeholder="Name"
+                  placeholder="Country"
                   type="text"
                   id="name"
                 />
               </div>
 
-              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label class="sr-only" for="email">Email</label>
-                  <input
-                    class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
-                    placeholder="Email address"
-                    type="email"
-                    id="email"
-                  />
-                </div>
-
-                <div>
-                  <label class="sr-only" for="phone">Phone</label>
-                  <input
-                    class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
-                    placeholder="Phone Number"
-                    type="tel"
-                    id="phone"
-                  />
-                </div>
+              <div>
+                <input
+                  class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
+                  placeholder="Email address"
+                  type="email"
+                  id="email"
+                  required
+                />
               </div>
 
-              <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
+              <div>
+                <input
+                  class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
+                  placeholder="Phone Number"
+                  type="tel"
+                  id="phone"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label class="sr-only" for="email">Email</label>
+                  <label>Rent Date</label>
                   <input
                     class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
-                    placeholder="Email address"
-                    type="email"
+                    type="date"
                     id="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label>Return Date</label>
+                  <input
+                    class="w-full rounded-lg border-[1px] border-gray-200 p-3 text-sm"
+                    type="date"
+                    placeholder="Phone Number"
                   />
                 </div>
               </div>
 
               <div>
-                <label class="sr-only" for="message">Message</label>
                 <textarea
                   class="w-full rounded-lg border-gray-200 p-3 text-sm border"
-                  placeholder="Message"
+                  placeholder="Your Message"
                   rows="8"
                   id="message"
                 ></textarea>
@@ -89,7 +109,7 @@
               <div class="mt-4">
                 <button
                   type="submit"
-                  class="inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto"
+                  class="inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto bg-sky-500"
                 >
                   <span class="font-medium"> Submit Registration </span>
 
