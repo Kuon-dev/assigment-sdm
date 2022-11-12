@@ -7,7 +7,7 @@
         <h2
           class="mt-1 text-2xl font-extrabold uppercase tracking-wide lg:text-3xl"
         >
-          Dive Package
+          Items
         </h2>
       </div>
 
