@@ -69,7 +69,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import LineChart from '../components/lineChart';
+import LineChart from '../components/LineChart.ts';
 
 const isHidden = ref(true);
 </script>
