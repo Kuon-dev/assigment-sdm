@@ -108,6 +108,7 @@
       </nav>
 
       <div class="hidden items-center gap-4 lg:flex">
+        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
         <a
           href="#"
           class="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600"
@@ -141,4 +142,8 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+  .fa-cart-shopping {
+    margin-right: 1rem;
+  }
+</style>

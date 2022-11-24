@@ -123,30 +123,9 @@ const adminNav = [
 
 const managerNav = [
 	{
-		label: 'Manage',
+		label: 'Manage Admin',
 		icon: 'fa-solid fa-users',
-		nested: [
-			{
-				label: 'Member Info',
-				icon: 'fa-solid fa-user'
-			},
-			{
-				label: 'Item',
-				icon: 'fa-solid fa-box'
-			},
-			{
-				label: 'Equipment Rental',
-				icon: 'fa-solid fa-screwdriver-wrench'
-			},
-			{
-				label: 'Dive Package',
-				icon: 'fa-solid fa-cubes'
-			},
-			{
-				label: 'Deliver Status',
-				icon: 'fa-solid fa-truck'
-			}
-		]
+		nested: []
 	},
 	{
 		label: 'Generate Report',
