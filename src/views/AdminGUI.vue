@@ -78,8 +78,6 @@ const settings = {
 	menubar: false,
 	plugins: ['link', 'paste', 'lists'],
 	toolbar_mode: 'warp',
-	skin: 'small',
-	icons: 'small',
 	branding: false,
 	paste_as_text: true
 };
