@@ -54,7 +54,7 @@ const demoData = [
 		amountSold: '120'
 	},
 	{
-		img: 'https://www.topbest10reviews.com/wp-content/uploads/2019/08/10.-Deep-Blue-Gear-Latitude-2-Fins.jpg',
+		img: 'https://theswimshop.co.za/wp-content/uploads/2020/08/Spurt-TRAINING-FINS-Yellow.jpg',
 		title: 'Yellow Swim Fins',
 		price: '10',
 		amountSold: '120'
@@ -66,7 +66,7 @@ const demoData = [
 		amountSold: '120'
 	},
 	{
-		img: 'https://ourlandoutdoor.com/wp-content/uploads/2021/01/16105893446701-12915.jpeg',
+		img: 'https://www.wigglestatic.com/product-media/101828486/uNHtBpeV.jpeg?w=430&h=430&a=7',
 		title: 'Wiggle Swim Fins',
 		price: '10',
 		amountSold: '120'
