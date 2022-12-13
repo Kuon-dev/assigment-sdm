@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Navbar :demo-data="demoData"></Navbar>
-    <Page :demo-data="demoData"></Page>
-    <div class="">
+    <Navbar :demo-data="demoData" @set-toggle-overlay="toggleOverlay($event)" />
+    <Page :demo-data="demoData" />
+    <div v-if="isOverlayActive">
       <ShoppingCart
+        @disable-overlay="toggleOverlay(false)"
         :demo-data="demoData"
+        :is-overlay="isOverlayActive"
         :is-overlay-active="isOverlayActive"
-        @set-toggle-overlay="toggleOverlay($event)"
       />
     </div>
   </div>
@@ -28,8 +29,7 @@ const props = defineProps({
 const isOverlayActive = ref(false);
 
 const toggleOverlay = (e) => {
-	console.log(e);
-	//isOverlayActive.value = e;
+	isOverlayActive.value = e;
 };
 </script>
 

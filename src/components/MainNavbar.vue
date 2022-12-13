@@ -110,7 +110,7 @@
       <div class="hidden items-center gap-4 lg:flex">
         <font-awesome-icon
           icon="fa-solid fa-cart-shopping"
-          @click="toggleOverlay($event)"
+          @click="toggleOverlay(true)"
         />
         <a
           href="#"
@@ -145,6 +145,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import ShoppingCart from '../views/ShoppingCart.vue';
 
 const props = defineProps({
@@ -154,9 +155,12 @@ const props = defineProps({
 	}
 });
 
+const emit = defineEmits(['setToggleOverlay']);
+
 const isOverlay = ref(false);
+
 const toggleOverlay = (e) => {
-	emit(setToggleOverlay, e);
+	emit('setToggleOverlay', true);
 };
 </script>
 

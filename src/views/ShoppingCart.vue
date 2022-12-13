@@ -17,6 +17,7 @@
           >
             <div
               class="flex items-center text-gray-500 hover:text-gray-600 cursor-pointer mb-2"
+              @click="disableOverlay()"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +30,6 @@
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                @click="isOverlay = !isOverlay"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="15 6 9 12 15 18" />
@@ -157,16 +157,19 @@ const props = defineProps({
 	demoData: {
 		type: Array,
 		default: null
+	},
+	isOverlay: {
+		type: Boolean,
+		default: false
 	}
 });
 
-const emit = defineEmits(['setToggleOverlay']);
+const emit = defineEmits(['disableOverlay']);
 
-const isOverlay = ref(false);
 const totalPrice = ref(0);
 
-const toggleOverlay = () => {
-	emit(setToggleOverlay, isOverlay.value);
+const disableOverlay = () => {
+	emit('disableOverlay', false);
 };
 
 const calTotal = (arr) => {
