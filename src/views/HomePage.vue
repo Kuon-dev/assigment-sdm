@@ -1,12 +1,11 @@
 <template>
   <div>
-    <Navbar :demo-data="demoData"></Navbar>
+    <Navbar :demo-data="demoData" @set-toggle-overlay="toggleOverlay($event)" />
     <Page :demo-data="demoData"></Page>
     <div class="">
       <ShoppingCart
         :demo-data="demoData"
         :is-overlay-active="isOverlayActive"
-        @set-toggle-overlay="toggleOverlay($event)"
       />
     </div>
   </div>
