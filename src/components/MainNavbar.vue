@@ -110,7 +110,7 @@
       <div class="hidden items-center gap-4 lg:flex">
         <font-awesome-icon
           icon="fa-solid fa-cart-shopping"
-          @click="toggleOverlay(isOverlay)"
+          @click="toggleOverlay(true)"
         />
         <a
           href="#"
@@ -158,9 +158,9 @@ const props = defineProps({
 const emit = defineEmits(['setToggleOverlay']);
 
 const isOverlay = ref(false);
+
 const toggleOverlay = (e) => {
-	isOverlay.value != isOverlay.value;
-	emit('setToggleOverlay', isOverlay.value);
+	emit('setToggleOverlay', true);
 };
 </script>
 
