@@ -108,7 +108,10 @@
       </nav>
 
       <div class="hidden items-center gap-4 lg:flex">
-        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+        <font-awesome-icon
+          icon="fa-solid fa-cart-shopping"
+          @click="toggleOverlay(true)"
+        />
         <a
           href="#"
           class="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600"
@@ -135,11 +138,30 @@
         <a class="flex-shrink-0 pl-4 text-gray-900" href="">Contact</a>
       </nav>
     </div>
+    <div class="fixed z-20">
+      <ShoppingCart :demo-data="demoData" />
+    </div>
   </header>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref } from 'vue';
+import ShoppingCart from '../views/ShoppingCart.vue';
+
+const props = defineProps({
+	demoData: {
+		type: Array,
+		default: null
+	}
+});
+
+const emit = defineEmits(['setToggleOverlay']);
+
+const isOverlay = ref(false);
+
+const toggleOverlay = (e) => {
+	emit('setToggleOverlay', true);
+};
 </script>
 
 <style scoped>
