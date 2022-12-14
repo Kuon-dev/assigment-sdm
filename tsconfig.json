@@ -4,5 +4,7 @@
         "paths": {
             "components/*": ["src/components/*"]
         }
-    }
+    },
+    "types": ["cypress", "node"],
+    "include": ["**/*.ts"]
 }
